@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #ffffff; /* Set background to white */
+        }
+
+        .navbar {
+            padding: 1rem 2rem;
+        }
+
+        .navbar-brand {
+            font-size: 1.75rem; /* Slightly larger font size */
+            font-weight: 700;
+            color: #87CEEB; /* Sky blue color */
+        }
+
+        .navbar-nav .nav-link {
+            color: #87CEEB; /* Sky blue color */
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #0056b3; /* Darker sky blue color */
+        }
+
+        .hero {
+            background: #87CEEB; /* Sky blue color */
+            color: #ffffff;
+            padding: 40px 0; /* Adjusted size */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem; /* Adjusted font size */
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            animation: moveText 8s ease-in-out infinite;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        @keyframes moveText {
+            0% { transform: translateY(-5px); }
+            50% { transform: translateY(5px); }
+            100% { transform: translateY(-5px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .social-icons {
+            margin-top: 20px;
+        }
+
+        .hero .social-icons a {
+            color: #333333; /* Dark color for better visibility */
+            font-size: 1.5rem;
+            margin: 0 15px; /* Increased spacing */
+            transition: color 0.3s ease;
+        }
+
+        .hero .social-icons a:hover {
+            color: #ffffff; /* Change to white on hover for better contrast */
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #87CEEB; /* Sky blue color */
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .about,
+        .skills,
+        .projects,
+        .contact {
+            padding: 60px 20px; /* Consistent padding */
+            background-color: #ffffff; /* White background */
+        }
+
+        .about .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .about .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .about .card-body {
+            padding: 20px;
+        }
+
+        .about .card-title {
+            font-size: 1.5rem;
+            color: #87CEEB; /* Sky blue color */
+            font-weight: 600;
+        }
+
+        .about .card-text {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .skills .skill {
+            border-radius: 10px;
+            background: #f0f8ff; /* Very light sky blue */
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skills .skill:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills .skill h5 {
+            font-size: 1.5rem;
+            color: #87CEEB; /* Sky blue color */
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .skills .skill p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .projects .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .projects .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .projects .card-body {
+            padding: 20px;
+        }
+
+        .projects .card-title {
+            font-size: 1.25rem;
+            color: #87CEEB; /* Sky blue color */
+            font-weight: 600;
+        }
+
+        .projects .card-text {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact .form-group label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .contact .form-control {
+            border-radius: 0.25rem;
+            box-shadow: none;
+            border: 1px solid #ddd;
+        }
+
+        .contact .form-control:focus {
+            border-color: #87CEEB; /* Sky blue color */
+            box-shadow: 0 0 0 0.2rem rgba(135, 206, 235, 0.25);
+        }
+
+        .contact .btn-primary {
+            background-color: #87CEEB; /* Sky blue color */
+            border-color: #87CEEB; /* Sky blue color */
+            font-weight: 600;
+        }
+
+        .contact .btn-primary:hover {
+            background-color: #0056b3; /* Darker sky blue color */
+            border-color: #0056b3; /* Darker sky blue color */
+        }
+
+        footer {
+            background-color: #ffffff; /* White background */
+            padding: 20px 0;
+            text-align: center;
+            color: #333;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem; /* Adjusted font size for smaller screens */
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="project.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+    <div class="hero-content">
+        <h1>Hello, I'm Vinayak Khandelwal</h1>
+        <p>A Front End Developer and Data Science and Machine Learning Enthusiast</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/vinayak-khandelwal-b3216425a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.github.com/VinayakKhandelwal07" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">My Journey</h5>
+                        <p class="card-text">I'm a passionate data science student with experience in Python, SQL, and machine learning. My journey began with a fascination for data and its potential to drive insights. Alongside my data science skills, I have developed a solid foundation in front-end development, including proficiency in HTML, CSS, and JavaScript. Additionally, I have a strong grasp of Flask for building and deploying web applications. I've pursued academic excellence and practical experience through internships and personal projects, combining these skills to create comprehensive data-driven solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Education & Experience</h5>
+                        <p class="card-text">Bachelor's in Technology - Poornima Institute of Engineering and Technology, Jaipur</p>
+                        <p class="card-text">Internship at Upflair Pvt LTD - Data Science</p>
+                        <p class="card-text">Projects in Front-End, Python, SQL, and Machine Learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills">
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="skill">
+                    <h5>Python</h5>
+                    <p>Advanced proficiency in Python, including libraries like Pandas, NumPy, and Scikit-Learn for data analysis and machine learning.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill">
+                    <h5>SQL</h5>
+                    <p>Proficient in SQL for querying databases, data manipulation, and data extraction.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill">
+                    <h5>Machine Learning</h5>
+                    <p>Skilled in developing and deploying machine learning models, with hands-on experience in supervised and unsupervised learning.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill">
+                    <h5>Data Visualization</h5>
+                    <p>Expertise in creating insightful data visualizations using tools like Matplotlib, Seaborn, and Plotly.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill">
+                    <h5>Front-End Development</h5>
+                    <p>Experienced in front-end technologies including HTML, CSS, and JavaScript to build responsive and interactive web applications.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill">
+                    <h5>Statistical Analysis</h5>
+                    <p>Strong background in statistical methods and hypothesis testing to draw meaningful conclusions from data.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">CLI Based Chatting App</h5>
+                        <p class="card-text">This project involves a command-line chat application developed in Python, designed to facilitate two-way communication between users. Utilizes built-in libraries for seamless message exchange in a console environment.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Bike Prediction Machine Learning Model</h5>
+                        <p class="card-text">Developed a machine learning model to predict bike rental demand using historical data. The model utilizes algorithms such as linear regression to forecast future bike usage, optimizing resource allocation and improving operational efficiency.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio Website</h5>
+                        <p class="card-text">Built a personal portfolio website using Flask, showcasing my projects, skills, and experience. The site features dynamic content management and a user-friendly interface, demonstrating my proficiency in web development and Flask application deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 @VinayakKhandelwal. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Custom JavaScript for form handling -->
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        window.open('thank.html', '_blank'); // Open thank.html in a new tab
+        // Optionally, handle form data here (e.g., send it via AJAX)
+    });
+</script>
+
+</body>
+</html>
