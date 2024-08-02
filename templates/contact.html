@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,32 +15,38 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #ffffff; /* Set background to white */
+            background-color: #ffffff;
+            /* Set background to white */
         }
 
         .navbar {
             padding: 1rem 2rem;
-            background-color: #ffffff; /* White background for navbar */
+            background-color: #ffffff;
+            /* White background for navbar */
             border-bottom: 1px solid #ddd;
         }
 
         .navbar-brand {
             font-size: 1.75rem;
             font-weight: 700;
-            color: #87CEEB; /* Sky blue color */
+            color: #87CEEB;
+            /* Sky blue color */
         }
 
         .navbar-nav .nav-link {
-            color: #87CEEB; /* Sky blue color */
+            color: #87CEEB;
+            /* Sky blue color */
             font-weight: 500;
         }
 
         .navbar-nav .nav-link:hover {
-            color: #0056b3; /* Darker sky blue color */
+            color: #0056b3;
+            /* Darker sky blue color */
         }
 
         .contact-header {
-            background: #87CEEB; /* Sky blue color */
+            background: #87CEEB;
+            /* Sky blue color */
             color: #ffffff;
             padding: 60px 0;
             text-align: center;
@@ -58,38 +65,91 @@
         .contact-section {
             padding: 60px 20px;
         }
+        .contact-section {
+    padding: 60px 20px;
+    background: #f4f4f9; /* Light grey background for contrast */
+}Copy code
+.contact-section {
+    padding: 60px 20px;
+    background: #f9f9f9; /* Light grey background for a modern feel */
+}
 
-        .contact-form {
-            max-width: 700px;
-            margin: auto;
-        }
+.contact-form-wrapper {
+    background: #ffffff; /* White background for the form */
+    padding: 40px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    border: 1px solid #e0e0e0; /* Light border for definition */
+    transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition effects */
+}
 
-        .contact-form .form-group label {
-            font-weight: 600;
-            color: #333;
-        }
+.contact-form-wrapper:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
 
-        .contact-form .form-control {
-            border-radius: 0.25rem;
-            box-shadow: none;
-            border: 1px solid #ddd;
-        }
+.contact-form-wrapper h2 {
+    font-size: 2.25rem; /* Larger heading for prominence */
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 1.5rem; /* Space below heading */
+}
 
-        .contact-form .form-control:focus {
-            border-color: #87CEEB; /* Sky blue color */
-            box-shadow: 0 0 0 0.2rem rgba(135, 206, 235, 0.25);
-        }
+.contact-form-wrapper .form-group {
+    margin-bottom: 1.75rem; /* Increased space between form groups */
+}
 
-        .contact-form .btn-primary {
-            background-color: #87CEEB; /* Sky blue color */
-            border-color: #87CEEB; /* Sky blue color */
-            font-weight: 600;
-        }
+.contact-form-wrapper .form-group label {
+    font-weight: 600;
+    color: #333;
+    display: block; /* Ensures label is on its own line */
+    margin-bottom: 0.5rem; /* Space between label and input */
+}
 
-        .contact-form .btn-primary:hover {
-            background-color: #0056b3; /* Darker sky blue color */
-            border-color: #0056b3; /* Darker sky blue color */
-        }
+.contact-form-wrapper .form-control {
+    border-radius: 0.75rem; /* More rounded corners for inputs */
+    border: 1px solid #ddd;
+    box-shadow: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    padding: 0.75rem 1.25rem; /* Padding for better spacing */
+    font-size: 1rem; /* Ensures font size is readable */
+}
+
+.contact-form-wrapper .form-control:focus {
+    border-color: #87CEEB; /* Sky blue color */
+    box-shadow: 0 0 0 0.3rem rgba(135, 206, 235, 0.25); /* Focus shadow */
+    outline: none; /* Removes default outline */
+}
+
+.contact-form-wrapper .btn-primary {
+    background-color: #87CEEB; /* Sky blue color */
+    border-color: #87CEEB; /* Sky blue color */
+    font-weight: 600;
+    border-radius: 0.75rem; /* Rounded corners for the button */
+    padding: 0.75rem 1.25rem; /* Better button size */
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.contact-form-wrapper .btn-primary:hover {
+    background-color: #0056b3; /* Darker sky blue color */
+    border-color: #0056b3; /* Darker sky blue color */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.contact-form-wrapper .form-control[type="textarea"] {
+    height: auto; /* Allows for textarea expansion */
+    resize: vertical; /* Allows user to resize vertically */
+}
+
+@media (max-width: 768px) {
+    .contact-form-wrapper {
+        padding: 30px;
+    }
+
+    .contact-form-wrapper h2 {
+        font-size: 1.75rem;
+    }
+}
 
         .social-media {
             text-align: center;
@@ -104,11 +164,13 @@
         }
 
         .social-media a:hover {
-            color: #0056b3; /* Darker sky blue color */
+            color: #0056b3;
+            /* Darker sky blue color */
         }
 
         footer {
-            background-color: #ffffff; /* White background */
+            background-color: #ffffff;
+            /* White background */
             padding: 20px 0;
             text-align: center;
             color: #333;
@@ -136,81 +198,94 @@
         }
     </script>
 </head>
+
 <body>
 
-<!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="index.html">My Portfolio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="project.html">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="resume.html">Resume</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<!-- Contact Header Section -->
-<header class="contact-header">
-    <h1>Contact Me</h1>
-    <p>I'd love to hear from you! Feel free to get in touch.</p>
-</header>
-
-<!-- Contact Section -->
-<section class="contact-section">
-    <div class="container">
-        <form class="contact-form" onsubmit="handleFormSubmission(event)">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
-
-        <!-- Social Media Links -->
-        <div class="social-media">
-            <a href="https://www.linkedin.com/in/vinayak-khandelwal-b3216425a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/VinayakKhandelwal07" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <!-- Add other social media links here if needed -->
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/index">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/project">Projects</a>
+                </li>
+                <!-- <li class="nav-item">
+                <a class="nav-link" href="/blog">Blog</a>
+            </li> -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                <a class="nav-link" href="/resume">Resume</a>
+            </li> -->
+            </ul>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 @VinayakKhandelwal. All rights reserved.</p>
-</footer>
+    <!-- Contact Header Section -->
+    <header class="contact-header">
+        <h1>Contact Me</h1>
+        <p>I'd love to hear from you! Feel free to get in touch.</p>
+    </header>
 
-<!-- Bootstrap JS and dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="contact-form-wrapper">
+                        <h2 class="text-center mb-4">Get in Touch</h2>
+                        <form action="{{ url_for('submit_form') }}" method="post" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="" required><br>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="text" name="email" id="" required><br>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <input type="textarea" name="message" id="" required><br>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/vinayak-khandelwal-b3216425a/" target="_blank" title="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/VinayakKhandelwal07" target="_blank" title="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <!-- Add other social media links here if needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 @VinayakKhandelwal. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
